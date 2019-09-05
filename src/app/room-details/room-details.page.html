@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-icon slot="start" (click)="home()" name="arrow-back" class="icon" ></ion-icon>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="selection">
+    <h2 class="name">{{selection.name}}</h2>
+    <p padding>{{selection.info}}</p>
+    <div padding><h4>Amenities:</h4>{{selection.amenities}}</div>  
+  </div>
+
+  <div class="booking-btn">
+  <ion-button (click)="confirm()">CONFIRM BOOKING</ion-button>
+  </div>
+</ion-content>

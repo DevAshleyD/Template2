@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="tertiary" text-center>
+    <ion-title>
+      Your Bookings
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="!roomBookings.length" class="primary-bg" margin-top>
+    <ion-card-content>
+      <p text-center class="text-white">You have no bookings yet.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- RoomBookings -->
+  <div *ngIf="roomBookings.length">
+    <!-- <ion-item-divider color="dark" class="bold">Your Bookings</ion-item-divider> -->
+
+    <ion-card *ngFor="let book of roomBookings">
+      <ion-card-header  color="light" class="header" text-center>
+        <h3 class="header-text">Booking ID: <strong>{{ book.roomId }}</strong> {{currentDate | date:'dd-MM-yyyy'}}</h3>
+      </ion-card-header>
+
+      <ion-card-content padding *ngIf="book.selection">
+          <h3 class="name">{{ book.selection.name }}</h3>
+          <p ion-text>{{ book.selection.amenities }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

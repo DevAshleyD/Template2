@@ -1,0 +1,37 @@
+ion-item{
+    --inner-padding-end: 0px;
+    --padding-start:0px;
+}
+.img {
+    // border-radius: 50%;
+    width: 70px;
+    height: 70px;
+  }
+
+.name{
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 5px;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+.time{
+    font-size: 12px;
+    color: #70012b;
+}
+
+.location{
+    font-size: 12px;
+    color: #70012b;
+}
+
+.type{
+    color: #70012b;
+    font-size: 12px;
+}
+
+.frequency{
+    font-size: 12px;
+    color: #70012b;
+}

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="tertiary" text-center>
+    <ion-title>
+      Meetups
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <ion-item [color]="even? 'light' : 'grey'" *ngFor="let leader of leaders; let even = even" (click)="chooseLeader(leader)">  
+       <img class="img" [src]="leader.logo">
+    <ion-label>
+        <p class="name">{{leader.name}}</p>
+      <ion-row>
+        <ion-col><p class="time">Time: {{leader.time}}</p></ion-col>
+        <ion-col><p class="location">Location: {{leader.location}}</p></ion-col>
+      </ion-row>
+      <ion-row> 
+          <ion-col><p class="type">Type: {{leader.type}}</p></ion-col>
+          <ion-col><p class="frequency">Frequency: {{leader.frequency}}</p></ion-col>
+      </ion-row>
+    </ion-label>     
+      </ion-item>
+    </ion-list>
+</ion-content>

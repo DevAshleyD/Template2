@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="tertiary" text-center>
+    <ion-title>
+      Rooms
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="light" *ngFor="let room of rooms">
+    <ion-label>
+      <h1 class="name">{{room.name}}</h1>
+    <ion-row>
+      <ion-col><p class="text">Capacity: {{room.capacity}}</p></ion-col>
+      <ion-col><img class="img" src="/assets/wifi.png"><span class="text"> WiFi</span></ion-col>
+    </ion-row>
+    <ion-row>  
+        <ion-col><img class="img" src="/assets/ac.png"><span class="text"> AC</span></ion-col>
+        <ion-col><ion-button (click)="chooseRoom(room)">SELECT</ion-button></ion-col>
+    </ion-row>
+    </ion-label>
+  </ion-card>
+</ion-content>
